@@ -4,12 +4,11 @@ import pandas as pd
 
 st.write("""# Summerize your text""")
 
-
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-tokenizer = AutoTokenizer.from_pretrained("tokenizer")
+tokenizer = AutoTokenizer.from_pretrained("google/pegasus-multi_news")
 
-model = AutoModelForSeq2SeqLM.from_pretrained("pegasus_summery_model")
+model = AutoModelForSeq2SeqLM.from_pretrained("google/pegasus-multi_news")
 
 text_input = st.text_area("text to summerize")
 
